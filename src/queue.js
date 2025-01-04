@@ -27,7 +27,6 @@ class Queue {
   }
 
   enqueue(value) {
-    console.log("enqueue", value)
     if (this.queue === null) {
       this.queue = new ListNode(value);
     }else {
@@ -37,7 +36,6 @@ class Queue {
       }
       current.next = new ListNode(value);
     }
-    console.log(this.queue)
     return this.queue;
     // throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
@@ -46,7 +44,6 @@ class Queue {
   dequeue() {
     let current = this.queue;
     this.queue = current.next;
-    console.log("dequeue", this.queue)
     return current.value;
   }
 }
